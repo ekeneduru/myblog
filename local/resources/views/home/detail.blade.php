@@ -26,7 +26,7 @@
               <img class="card-img-top img-fluid" src="{{ URL::to('/') }}/uploads/{{$blog->photourl}}" alt="">
               <div class="card-body">
               <h3 class="card-title">{{$blog->title}}</h3>
-                <p class="card-text">{{$blog->description}}</p>
+                <p class="card-text">{!!$blog->description!!}</p>
               <span class="text-warning">Created On: {{date_format($blog->created_at,"d-M-Y")}}</span>
                <br/>
               <span class="text-success">Created by: {{ $blog->user->firstname}} {{$blog->user->lastname}}</span>

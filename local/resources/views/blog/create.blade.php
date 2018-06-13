@@ -3,7 +3,7 @@
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
-        <div class="col-md-8">
+        <div class="col-md-10">
             <div class="card">
                 <div class="card-header">{{ __('Create Blog') }}</div>
                 <br>
@@ -17,7 +17,7 @@
                         <div class="form-group row">
                             <label for="title" class="col-md-4 col-form-label text-md-right">{{ __('Title') }}</label>
 
-                            <div class="col-md-6">
+                            <div class="col-md-8">
                                 <input id="title" type="text" class="form-control{{ $errors->has('title') ? ' is-invalid' : '' }}" name="title" value="{{ old('title') }}" required autofocus>
 
                                 @if ($errors->has('title'))
@@ -30,7 +30,7 @@
                         <div class="form-group row">
                             <label for="description" class="col-md-4 col-form-label text-md-right">{{ __('Description') }}</label>
 
-                            <div class="col-md-6">
+                            <div class="col-md-8">
                                 {{-- <input id="description" type="text" class="form-control{{ $errors->has('description') ? ' is-invalid' : '' }}" name="description" value="{{ old('description') }}" required autofocus> --}}
                                 <textarea  name="description" class="form-control{{ $errors->has('description') ? ' is-invalid' : '' }}" cols="50" rows="10" id="description" required autofocus></textarea>
                                 @if ($errors->has('description'))
@@ -43,7 +43,7 @@
                         <div class="form-group row">
                             <label for="photourl" class="col-md-4 col-form-label text-md-right">{{ __('Description') }}</label>
 
-                            <div class="col-md-6">
+                            <div class="col-md-8">
                                 <input  type="file" name="photourl" id="file">
                                 @if ($errors->has('photourl'))
                                     <span class="invalid-feedback">
@@ -55,7 +55,7 @@
                         <div class="form-group row">
                                 <label for="category" class="col-md-4 col-form-label text-md-right">{{ __('Category') }}</label>
     
-                                <div class="col-md-6">
+                                <div class="col-md-8">
                                    
                                         <select class="form-control" name="category">
                                                 @foreach($categories as $category)
@@ -72,7 +72,7 @@
                             <div class="form-group row">
                                     <label for="ispublished" class="col-md-4 col-form-label text-md-right">{{ __('Publish') }}</label>
         
-                                    <div class="col-md-6">
+                                    <div class="col-md-8">
                                         <input  type="checkbox" name="ispublished" id="file">
                                         @if ($errors->has('ispublished'))
                                             <span class="invalid-feedback">
