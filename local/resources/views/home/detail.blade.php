@@ -14,10 +14,13 @@
                 <div class="card mt-4">
                        
                         <div class="card-body">
-                        <h4>Social</h4>
-                        
+                        <h5>Share:</h5>
+                        <a href="#" class="fa fa-facebook"></a>
+                        <a href="#" class="fa fa-twitter"></a>
+                        <a href="#" class="fa fa-google"></a>
+                        <a href="#" class="fa fa-whatsapp"></a>
                         </div>
-                        <p></p>
+                        
             </div>
             <div class="card mt-4">
               <img class="card-img-top img-fluid" src="{{ URL::to('/') }}/uploads/{{$blog->photourl}}" alt="">
