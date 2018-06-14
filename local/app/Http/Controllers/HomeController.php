@@ -25,13 +25,13 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $blogs = Blog::with('User')->orderBy('created_at', 'desc')->paginate(6);
+        $blogs = Blog::with('User')->orderBy('created_at', 'desc')->paginate(9);
         $categories=Category::all();
         return view('home.home', ['blogs' => $blogs,'categories'=>$categories]);
     }
     public function category($id)
     {
-        $blogs = Blog::where('category_id', $id)->with('User')->orderBy('created_at', 'desc')->paginate(6);
+        $blogs = Blog::where('category_id', $id)->with('User')->orderBy('created_at', 'desc')->paginate(9);
         $categories=Category::all();
         return view('home.category', ['blogs' => $blogs,'categories'=>$categories]);
     }
